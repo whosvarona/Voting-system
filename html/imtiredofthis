@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Votación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Votación</h1>
+        <p>Elige tu candidato preferido y observa los resultados por estados.</p>
+    </header>
+    
+    <div class="candidates">
+        <div class="candidate">
+            <img src="images/trump.jpg" alt="Dunald Trump">
+            <h2>Dunald Trump</h2>
+            <p>Ex-presidente de los Estados Unidos, conocido por su enfoque en políticas conservadoras, economía y control migratorio.</p>
+            <button class="vote-button" onclick="votar('trump')">Votar</button>
+            <p id="trump-votes">Votos: 0</p>
+        </div>
+        <div class="candidate">
+            <img src="images/biden.jpg" alt="Joe Biden">
+            <h2>Joe Biden</h2>
+            <p>Actual presidente de los Estados Unidos, promueve la unidad, la justicia social, y la expansión del sistema de salud.</p>
+            <button class="vote-button" onclick="votar('biden')">Votar</button>
+            <p id="biden-votes">Votos: 0</p>
+        </div>
+        <div class="candidate">
+            <img src="images/obama.jpg" alt="Barack Obama">
+            <h2>Barack Obama</h2>
+            <p>Ex-presidente de los Estados Unidos, defensor de los derechos civiles y conocido por implementar la Ley de Cuidado de Salud Asequible.</p>
+            <button class="vote-button" onclick="votar('obama')">Votar</button>
+            <p id="obama-votes">Votos: 0</p>
+        </div>
+    </div>
+
+    <div class="results">
+        <h2>Resultados por Estado</h2>
+        <div id="state-results"></div>
+    </div>
+
+    <footer>
+        <button onclick="mostrarGanador()">Mostrar Resultados</button>
+        <p id="resultado-final"></p>
+        <p id="voto-confirmacion"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
